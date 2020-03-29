@@ -25,7 +25,8 @@ class User
         $this->age = $age;
     }
 
-    public function getAll() {
+    public function getAll()
+    {
         return $this->name . ' - ' . $this->age . ' - ' . $this->email;
     }
 }
@@ -35,4 +36,3 @@ $usr = new User();
 $usr->setAge(12);
 $usr->setName('Teeeest');
 echo $usr->getAll();
-
