@@ -3,5 +3,6 @@ CREATE TABLE IF NOT EXISTS users (
     name VARCHAR(50) NOT NULL,
     surname VARCHAR(75) NOT NULL,
     age INT(3) NOT NULL,
-    email VARCHAR(120) NOT NULL UNIQUE
+    email VARCHAR(120) NOT NULL UNIQUE,
+    phone VARCHAR(20)
 );

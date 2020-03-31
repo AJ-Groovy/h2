@@ -16,8 +16,13 @@ function table_exists($pdo, $table)
     return $result !== FALSE;
 }
 
+function get_users(PDO $pdo)
+{   
+    $query = $pdo->query("SELECT id FROM users ORDER BY id");
+    $users = $query->fetchAll(PDO::FETCH_COLUMN);
+    return $users;
+}
+
 $users_table_exists = table_exists($pdo, 'users');
 
 require_once('./pages/index.php');
-
-

@@ -12,9 +12,16 @@
 <?php
 if ($users_table_exists) {
     require_once('partials/placeholder.php');
+    require_once('partials/createUserForm.php');
+    $users = get_users($pdo);
+    require_once('partials/getUserByIdForm.php');
+    require_once('partials/deleteUsersByIdForm.php');
+
 } else {
     require_once('partials/form.php');
 }
+
+
 ?>
 </body>
 
